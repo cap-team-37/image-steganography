@@ -1,70 +1,132 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  
+  <img src="https://img.icons8.com/color/80/000000/data-encryption.png"/>
+  
+  <h1 align="center">Stega</h1>
 
-## Available Scripts
+  <p align="center">
+    A Steganography Tool
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://drive.google.com/file/d/1hOWJVv_HxIVPX7SOtW9EZjpMvlLsj5ix/view?usp=sharing">View Demo</a>
+  </p>
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+<p align="center">
+  <img src="https://github.com/ADI-KOTKAR/Stega/blob/master/images/home.PNG">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [About the Project](#about-the-project)
+* [Resources](#resources)
+* [Getting Started](#getting-started)
+* [Contributors](#contributors)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Steganography* can also be referred as the technique of hiding secret data within an ordinary, non secret, file or message in order to avoid detection; the secret data is then extracted at its destination. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Stega** is a Python-Flask based Web App ehich serves the purpose of a Steganograhy tool which includes the functionality of following techniques in a single application:
+- 📃 | 🖼️ Image Steganography
+- 🎵 Audio Steganography 
+- 📹 Video Steganography
 
-### `npm run eject`
+## Resources
+1. **Framework** : Flask
+- [Flask Documentation (1.1.x)](https://flask.palletsprojects.com/en/1.1.x/)
+2. **Image Steganography** : *opencv-python, stepic*
+- [OpenCV documentation](https://docs.opencv.org/master/)
+- [Stepic](https://pypi.org/project/stepic/)
+2. **Audio Steganography** : *wave*
+- [Wave Read & Write files](https://docs.python.org/3/library/wave.html)
+2. **Video Steganography** : *stegano, subprocess, ffmpeg*
+- [Stegano Documentation](https://stegano.readthedocs.io/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- GETTING STARTED -->
+## Getting Started
+#### Clone the Repo
+```
+git clone https://github.com/ADI-KOTKAR/Stega.git
+````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+####  Python 3 
+Install Python 3 in your system. [click here](https://www.python.org/downloads/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Create a Virtual Environment.
+- Create a Virtual Environment using **Anaconda Navigator** with Python version 3.7+ 
+- Open Terminal with the activated environment.
 
-## Learn More
+#### Installing Dependencies in Virtual Environment
+- Make sure environment is activated. 
+- Using Requirements File. **(Recommended)**
+```
+pip install -r requirements.txt
+```
+- Individually installing packages.
+	##### ***Flask | OpenCv | Stepic | Wave | Stegano***
+```
+pip install Flask opencv-python stepic wave stegano
+```
+#### File Configuration
+- Ensure that `static` folder is present inside each mode - Audio, Image, Text, Video inside `modes` directory. 
+```
+📦modes
+ ┣ 📂Audio
+ ┃ ┣ 📂static
+ ┃ ┣ 📂templates
+ ┃ ┣ 📜audio.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂Image
+ ┃ ┣ 📂static
+ ┃ ┃ ┗ 📜sample.jpg
+ ┃ ┣ 📂templates
+ ┃ ┣ 📜image.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂Text
+ ┃ ┣ 📂static
+ ┃ ┣ 📂templates
+ ┃ ┣ 📜text.py
+ ┃ ┗ 📜__init__.py
+ ┗ 📂Video
+ ┃ ┣ 📂ffmpeg-4.3.1-2020-10-01-full_build
+ ┃ ┣ 📂static
+ ┃ ┣ 📂templates
+ ┃ ┣ 📜video.py
+ ┃ ┗ 📜__init__.py
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you have made it so far then you are genius enough to configure and build this application yourself. :clap: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Running Application
+Make sure environment is activated, Now run:
+```
+python main.py
+```
+Open the localhost link - [http://127.0.0.1:5000/](http://127.0.0.1:5000/),this will open the App on your browser.
+You can use the sample files for testing in `test_files` folder.
 
-### Code Splitting
+## Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Aditya Kotkar** - [ADI-KOTKAR](https://github.com/ADI-KOTKAR)
+- **Shreyas Khadapkar** - [shreyaskhadapkar](https://github.com/shreyaskhadapkar)
+- **Praveenkumar Khatri** - [PraveenKhatri](https://github.com/PraveenKhatri)
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Project link: [Stega](https://github.com/ADI-KOTKAR/Stega)
+- [License](https://github.com/ADI-KOTKAR/Stega/blob/master/LICENSE)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
