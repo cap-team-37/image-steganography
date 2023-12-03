@@ -4,7 +4,7 @@ import stepic
 import shutil
 from flask import Blueprint, current_app, render_template, url_for, redirect, request, session, flash
 from datetime import timedelta
-# from flask_wtf import FlaskForm
+# from flask_wtf import FlaskForm 
 from werkzeug.utils import secure_filename
 
 text = Blueprint("text", __name__, static_folder="static",
