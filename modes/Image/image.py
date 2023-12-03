@@ -163,7 +163,7 @@ def decrypt(image_1):
                 img1[i][j][l] = int(v2, 2)
                 img2[i][j][l] = int(v3, 2)
 
-    # These are two images produced from
+    # These are two images produced from 
     # the encrypted image
     cv2.imwrite(os.path.join(
         current_app.config['UPLOAD_IMAGE_FOLDER'], "decrypted_sample.png"), img1)
