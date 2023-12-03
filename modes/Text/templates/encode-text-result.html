@@ -1,5 +1,5 @@
 {% extends 'text.html' %}
-{% block title %} STEGA | Text-Encode {% endblock %}
+{% block title %} S T A G - M E | Text-Encode {% endblock %}
 {% block content %}
     <div class="container mx-5 my-5">
         <h1>Encode Result</h1>
@@ -38,12 +38,11 @@
                     <hr>
                 {% if text_encryption %}
                     <h5 class="my-2">
-                        Encrypted Image:
+                        Your image has been stagged! 
                     </h5>
-                    <div class="col">
-                        <!-- <img class="row mb-1" src="static/encrypted_text_image.png" style="width:100px; height:100px"/> -->
-                        <a class="btn btn-dark btn-sm row" href="static/encrypted_text_image.png" download>Download</a>
-                    </div>
+                    
+                        <a href="static/encrypted_text_image.png" download="encrypted_text_image.png" class="btn btn-success btn-sm" style="margin-left: 10px;">Download me</a>
+                     
                     <br>
                 {% else %}
                     <p> No </p>
@@ -51,7 +50,7 @@
                 {% endif %}
                     <hr>
                 <div>
-                    <a class="btn btn-primary my-2" href="/">Done</a>
+                    <a class="btn btn-info my-2" href="/">Done</a>
                 </div>
             </div>
         </div>
