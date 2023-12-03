@@ -89,3 +89,5 @@ print(f"Encoded image : {rndm_txt}.png")
 # End Time
 end = time.time()
 print(end-start)
+
+
